@@ -4,7 +4,7 @@ import { Elements } from '@kontent-ai/delivery-sdk';
 const formatPrice = (price: number, language: string): string => {
   return price.toLocaleString(language, {
     style: 'currency',
-    currency: 'USD',
+    currency: 'CZK',
   });
 };
 

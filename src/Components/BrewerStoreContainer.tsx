@@ -104,7 +104,7 @@ const BrewerStoreContainer: React.FC = () => {
   const formatPrice = (price: number, language: string): string => {
     return price.toLocaleString(language, {
       style: 'currency',
-      currency: 'USD',
+      currency: 'CZK',
       maximumFractionDigits: 2,
     });
   };

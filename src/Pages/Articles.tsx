@@ -23,7 +23,7 @@ const Articles: React.FC = () => {
     const query = Client.items<ArticleType>()
       .type(contentTypes.article.codename)
       .orderByDescending('elements.post_date')
-      .limitParameter(10);
+      .limitParameter(4);
 
     if (language) {
       query.languageParameter(language);

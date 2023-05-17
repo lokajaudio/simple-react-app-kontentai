@@ -1,4 +1,4 @@
-import { englishCode, spanishCode } from './LanguageCodes';
+import { englishCode, spanishCode, czechCode } from './LanguageCodes';
 
 interface linkType {
   linkId?: string;
@@ -7,12 +7,15 @@ interface linkType {
 }
 
 export function getAboutUsLink(language: string): string {
-  return !language || language.toLowerCase() === englishCode.toLowerCase()
-    ? `about-us`
-    : language && language.toLowerCase() === spanishCode.toLowerCase()
-    ? `acerca-de`
-    : '';
+    return !language || language.toLowerCase() === englishCode.toLowerCase()
+        ? `about-us`
+        : language.toLowerCase() === spanishCode.toLowerCase()
+        ? `acerca-de`
+        : language.toLowerCase() === czechCode.toLowerCase()
+        ? `o-nás`
+        : '';
 }
+
 
 export function resolveContentLink(
   link: linkType,

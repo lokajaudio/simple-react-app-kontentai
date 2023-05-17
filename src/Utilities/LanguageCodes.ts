@@ -2,11 +2,14 @@ import { IContentItem } from '@kontent-ai/delivery-sdk';
 
 const languageCodes = [
   'en-US', // default languages
-  'es-ES',
+    'es-ES',
+    'cs-CZ',
+
 ];
 
 const englishCode = languageCodes[0];
 const spanishCode = languageCodes[1];
+const czechCode = languageCodes[2];
 
 const languageCodesLowerCase = languageCodes.map((code) => code.toLowerCase());
 
@@ -60,5 +63,6 @@ export {
   initLanguageCodeObjectWithArray,
   englishCode,
   spanishCode,
+  czechCode,
 };
 export default languageCodes;
